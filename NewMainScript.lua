@@ -1,4 +1,4 @@
-local baseDirectory = 'vwroblox/'
+local baseDirectory = 'vwbloxtrap/'
 local url = 'https://raw.githubusercontent.com/VapeVoidware/VWBloxtrap/'
 
 if not isfolder(baseDirectory:gsub("/$", "")) then

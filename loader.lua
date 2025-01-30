@@ -81,8 +81,8 @@ local function finishLoading()
 				shared.VapeSwitchServers = true
 				shared.vapereload = true
 				if shared.VapeDeveloper or shared.VoidDev then
-					if isfile('vape/NewMainScript.lua') then
-						loadstring(readfile("vape/NewMainScript.lua"))()
+					if isfile('vwbloxtrap/NewMainScript.lua') then
+						loadstring(readfile("vwbloxtrap/NewMainScript.lua"))()
 					else
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VWRewrite/main/NewMainScript.lua", true))()
 					end
@@ -144,10 +144,6 @@ local gui = readfile('vape/profiles/gui.txt')
 if not isfolder('vape/assets/'..gui) then
 	makefolder('vape/assets/'..gui)
 end
-local VWFunctions = loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VWRewrite/main/libraries/VoidwareFunctions.lua", true))()
---pload('libraries/VoidwareFunctions.lua', true, true)
-VWFunctions.GlobaliseObject("VoidwareFunctions", VWFunctions)
-VWFunctions.GlobaliseObject("VWFunctions", VWFunctions)
 
 vape = pload('guis/'..gui..'.lua', true, true)
 shared.vape = vape
